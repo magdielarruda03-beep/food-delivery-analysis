@@ -147,7 +147,7 @@ food-delivery-analysis/
 ## Como reproduzir
 
 ```bash
-git clone https://github.com/magdielarruda03-beep/food-delivery-analysis.git
+git clone https://github.com/<seu-usuario>/food-delivery-analysis.git
 cd food-delivery-analysis
 pip install -r requirements.txt
 jupyter notebook analise_delivery.ipynb
