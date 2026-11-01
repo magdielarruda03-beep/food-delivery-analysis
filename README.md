@@ -1,18 +1,19 @@
-# 🛵 O que realmente atrasa uma entrega? — Análise de 45 mil pedidos de delivery
+# O que realmente atrasa uma entrega? — Análise de 45 mil pedidos de delivery
 
 Análise de ponta a ponta (limpeza → exploração → testes estatísticos → análise multivariada → recomendações) do **[Food Delivery Dataset](https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset)** do Kaggle: 45.593 pedidos em 22 cidades da Índia, fev–abr/2022.
 
-📓 **Notebook completo:** [`analise_delivery.ipynb`](analise_delivery.ipynb)
+**Notebook completo:** [`analise_delivery.ipynb`](analise_delivery.ipynb)
 
 ---
 
 ## Principais resultados
 
-| | |
-|---|---|
-| ⏱️ **30%** dos pedidos passam de 30 min | 🎉 **+75%** de tempo em dias de festival, 100% fora do SLA |
-| 📦 **2+ entregas agrupadas** quase dobram o tempo | 🛵 A moto **não** é mais lenta — o **veículo em mau estado** é |
-| 🌫️ **Neblina** pesa mais que tempestade | 🏙️ Cidade e tipo de pedido **não** influenciam o tempo |
+- **30%** dos pedidos passam de 30 minutos.
+- Em dias de festival, o tempo médio sobe **75%** e 100% dos pedidos ficam fora do prazo.
+- **2 ou mais entregas agrupadas** quase dobram o tempo.
+- A moto **não** é mais lenta: o que atrasa é o **veículo em mau estado**.
+- **Neblina** pesa mais que tempestade.
+- Cidade e tipo de pedido **não** influenciam o tempo.
 
 ## Perguntas de negócio
 
@@ -55,7 +56,7 @@ Atributos criados: distância (Haversine), tempo de preparo, hora do dia, dia da
 ### Trânsito: de 21 para 31 minutos — e de 8% para 51% fora do SLA
 ![Trânsito](images/02_transito.png)
 
-> ⚠️ Na base, o trânsito é praticamente **determinado pelo horário** (manhã = sempre baixo; 18–20h = congestionado). Os dois carregam a mesma informação. O pico de demanda (18h–23h) coincide com o pior trânsito.
+> **Atenção:** na base, o trânsito é praticamente **determinado pelo horário** (manhã = sempre baixo; 18–20h = congestionado). Os dois carregam a mesma informação. O pico de demanda (18h–23h) coincide com o pior trânsito.
 
 ### Agrupar entregas tem um custo alto
 ![Entregas múltiplas](images/05_entregas_multiplas.png)
@@ -147,7 +148,7 @@ food-delivery-analysis/
 ## Como reproduzir
 
 ```bash
-git clone https://github.com/<seu-usuario>/food-delivery-analysis.git
+git clone https://github.com/magdielarruda03-beep/food-delivery-analysis.git
 cd food-delivery-analysis
 pip install -r requirements.txt
 jupyter notebook analise_delivery.ipynb
